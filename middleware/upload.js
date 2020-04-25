@@ -1,7 +1,7 @@
 const multer = require('multer')
 const moment = require('moment')
 
-const storage = multer.discStorage({
+const storage = multer.diskStorage({
 	destination(req, file, cb) {
 		cb(null, 'uploads/')
 	},
@@ -12,11 +12,11 @@ const storage = multer.discStorage({
 })
 
 const fileFilter = (req, file, cb) => {
-	if(file.mimetype === 'image/png' || (file.mimetype === 'image/jpeg') {
+	if(file.mimetype === 'image/png' || file.mimetype === 'image/jpeg') {
 		cb(null, true)
-	} else (
+	} else {
 		cb(null, false)
-	)
+	}
 }
 
 const limits = {

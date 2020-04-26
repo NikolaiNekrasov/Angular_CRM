@@ -1,1 +1,2 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~matrialize-css/dist/css/materialize.min.css"
+@imoprt "theme/styles.min.css";
